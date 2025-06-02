@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.qrc
+resources_rc.py
+venv/
+/dist/
+/build/
+.DS_Store
