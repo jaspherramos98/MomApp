@@ -1,5 +1,5 @@
 # MomApp - Screen Time Manager
-![Screenshot](resources/screenshot.png)
+![Screenshot](screenshot.png)
 ## Features
 - Real-time usage tracking
 - Break reminders
