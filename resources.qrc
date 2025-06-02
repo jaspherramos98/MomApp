@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource prefix = "/">
+    <file>resources/sounds/LevelUp3.wav</file>
+    <file>resources/qss/dark.qss</file>
+</qresource>
+</RCC>

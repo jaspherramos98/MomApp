@@ -1,0 +1,102 @@
+/* Main Application Styling */
+QWidget {
+    background-color: #333333;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 12px;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #222222;
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #333333;
+    border: 1px solid #cccccc;
+}
+
+QPushButton:pressed {
+    background-color: #111111;
+}
+
+/* Labels */
+QLabel {
+    color: #ffffff;
+}
+
+/* Text Inputs */
+QLineEdit, QTextEdit {
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #555555;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 1px solid #777777;
+}
+
+/* Sliders */
+QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 8px;
+    background: #3d3d3d;
+    margin: 2px 0;
+}
+
+QSlider::handle:horizontal {
+    background: #bcbcbc;
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 3px;
+}
+
+/* Checkboxes */
+QCheckBox {
+    color: #ffffff;
+    spacing: 5px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #222222;
+    border: 1px solid #aaaaaa;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #444444;
+    border: 1px solid #aaaaaa;
+    image: url(:/images/checkmark.png);
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background: #222222;
+    width: 12px;
+}
+
+QScrollBar::handle:vertical {
+    background: #555555;
+    min-height: 20px;
+}
+
+/* Dialogs */
+QInputDialog, QMessageBox {
+    background-color: #333333;
+}
+
+QInputDialog QLabel, QMessageBox QLabel {
+    color: #ffffff;
+}
