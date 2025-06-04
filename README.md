@@ -16,9 +16,8 @@ python -m src.main
 - Most future features would be working, but non-fuctional. Mostly for practice purposes.
 
 ## Future Features
-- Database using sqlite, sqlalch : For storing user sessions, break history, user data, sessions and etc.
-- Login and auth with flask : For personalization and data persistence
-  - BCrypt (Password Hasing)
+- ~~Database using sqlite: For storing user sessions, break history, user data, sessions and etc.~~
+- ~~Login and auth SQLALCHEMY~~
 - Cross-platform services using Firebase : Device variation
   - Mobile
   - Websockets
