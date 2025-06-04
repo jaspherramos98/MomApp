@@ -1,3 +1,4 @@
+import datetime
 from email.mime import application
 from PyQt5.QtCore import Qt, QTimer, QTime, pyqtSignal, QThread
 from PyQt5.QtWidgets import QLabel, QWidget, QVBoxLayout, QApplication
@@ -45,7 +46,8 @@ class TimeOverlay(DraggableOverlay):
     totalBreakTimeUpdated = pyqtSignal(str)
     resetRequested = pyqtSignal()
 
-    def __init__(self, shared_settings):
+    def __init__(self, shared_settings, user_id=None):
+        self.user_id = user_id
         super().__init__()
         self.shared_settings = shared_settings
         self.mainTimer = QTimer(self)
@@ -182,6 +184,18 @@ class TimeOverlay(DraggableOverlay):
                 return 0
             else:
                 return round(self.mainElapsedTime / 1000 / 60)
+
+    def save_session(self):
+        from src.core.database import SessionRecord, Session
+        db = Session()
+        session = SessionRecord(
+            user_id=self.user_id,
+            start_time=datetime.now(),
+            screen_time=self.get_total_time(),
+            break_time=self.totalBreakTime // 60000
+        )
+        db.add(session)
+        db.commit()
 
 class NotificationOverlay(DraggableOverlay):
     def __init__(self, timeOverlay, shared_settings, sound_file):
